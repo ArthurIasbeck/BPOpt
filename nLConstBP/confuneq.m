@@ -37,8 +37,9 @@ dh23 = hs/cos(gama);
 dh3 = dh13 + dh23;
 
 % Nonlinear inequality constraints
-c = [m - rc - l1 - r;
-     hm  - cb/2 - hr + r;
-     Hl + r - h + hm - dh3 + ct/2];
+% c = [m - rc - l1 - r;
+%      hm  - cb/2 - hr + r;
+%      Hl + r - h + hm - dh3 + ct/2];
+c = [];
 % Nonlinear equality constraints
 ceq = [];

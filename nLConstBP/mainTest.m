@@ -32,6 +32,6 @@ l1 = 0.05;
 theta = 30;
 
 x = [0 0.1 0.05];
-A = link4(theta,m,thetaR,l1)
-B = objfun(x)
-C = confuneq(x)
+A = link4(theta,m,thetaR,l1);
+B = objfun(x);
+C = confuneq(x);
