@@ -19,6 +19,11 @@ k1 = -2*l1*l3*sin(theta);
 k2 = 2*l3*(l0 - l1*cos(theta));
 k3 = l0^2 + l1^2 - l2^2 + l3^2 - 2*l0*l1*cos(theta);
 
+if any((k1.^2 + k2.^2 - k3.^2) < 0)
+    f = Inf;
+    return;
+end
+
 phi = 2*atan((-k1 - sqrt(k1.^2 + k2.^2 - k3.^2))./(k3 - k2));
 
 gama = pi - phi - gama0 - thetaN;

@@ -18,6 +18,7 @@ theta = thetaR - thetaN + thetaM;
 
 gama = link4(theta,m,thetaR,l1);
 
+% O código abaixo foi implementado dentro da função link 4 ================
 % l0 = sqrt((h - hm - hc)^2 + (m)^2);
 % l2 = sqrt((l1*cos(thetaR) + d3 - m - r)^2 + ...
 %     (h - hm - l1*sin(thetaR) - h0)^2);
