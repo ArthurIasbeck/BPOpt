@@ -1,4 +1,4 @@
-% Primeiro fazer tudo com graus e depois mudar pra radianos
+init;
 
 h = 0.1625;
 hm = 0.0425;
@@ -13,7 +13,7 @@ l1 = 0.05;
 
 thetaM = pi/180*linspace(-30,30);
 % thetaM = 30;
-% thetaN = atan((h - hm - hc)/m);
+thetaN = atan((h - hm - hc)/m);
 theta = thetaR - thetaN + thetaM;
 
 gama = link4(theta,m,thetaR,l1);

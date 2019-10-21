@@ -4,15 +4,14 @@ function [c,ceq] = confuneq(x)
 % ds -> d*
 % dl -> d' 
 
-global h
-global hm
-global hc
-global r
-global cb
-global ct
-global gama0
-global rc
-global l3
+global h;
+global hm;
+global hc;
+global d3;
+global r;
+global cb;
+global ct;
+global gama0;
 
 thetaR = x(1);
 m = x(2);
@@ -30,7 +29,7 @@ gama = link4(theta,m,thetaR,l1);
 dh13 = dl*tan(gama + gama0);
 
 Ds = dl/cos(gama + gama0);
-
+l3 = sqrt(hc^2 + d3^2);
 hs = hc*Ds/l3;
 dh23 = hs/cos(gama);
 

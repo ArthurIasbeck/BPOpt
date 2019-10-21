@@ -1,10 +1,15 @@
 function f = objfun(x)
 
+global h;
+global hm;
+global hc;
+
 thetaR = x(1);
 m = x(2);
 l1 = x(3);
 
 thetaM = pi/180*linspace(-30,30);
+thetaN = atan((h - hm - hc)/m);
 theta = thetaR - thetaN + thetaM;
 
 gama = link4(theta,m,thetaR,l1);

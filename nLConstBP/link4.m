@@ -7,13 +7,13 @@ global d3
 global r0
 global h0
 global gama0
+global l3
 
 thetaN = atan((h - hm - hc)/m);
 
 l0 = sqrt((h - hm - hc)^2 + (m)^2);
 l2 = sqrt((l1*cos(thetaR) + d3 - m - r0)^2 + ...
     (h - hm - l1*sin(thetaR) - h0)^2);
-l3 = sqrt(hc^2 + d3^2);
 
 k1 = -2*l1*l3*sin(theta);
 k2 = 2*l3*(l0 - l1*cos(theta));
