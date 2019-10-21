@@ -11,8 +11,8 @@ thetaR = 0;
 m = 0.10;
 l1 = 0.05;
 
-% thetaM = pi/180*linspace(-30,30);
-thetaM = 30;
+thetaM = pi/180*linspace(-30,30);
+% thetaM = 30;
 thetaN = atan((h - hm - hc)/m);
 theta = thetaR - thetaN + thetaM;
 
@@ -33,7 +33,7 @@ gama = link4(theta,m,thetaR,l1);
 % end
 % 
 % phi = 2*atan((-k1 - sqrt(k1.^2 + k2.^2 - k3.^2))./(k3 - k2));
-
+% 
 % gama0 = atan2(hc,d3);
 % gama = pi - phi - gama0 - thetaN
 gamaL = pi/180*linspace(-30,30);
