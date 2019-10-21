@@ -13,7 +13,7 @@ l1 = 0.05;
 
 thetaM = pi/180*linspace(-30,30);
 % thetaM = 30;
-thetaN = atan((h - hm - hc)/m);
+% thetaN = atan((h - hm - hc)/m);
 theta = thetaR - thetaN + thetaM;
 
 gama = link4(theta,m,thetaR,l1);
@@ -37,9 +37,11 @@ gama = link4(theta,m,thetaR,l1);
 % 
 % gama0 = atan2(hc,d3);
 % gama = pi - phi - gama0 - thetaN
+% =========================================================================
+
 gamaL = pi/180*linspace(-30,30);
 
-% e = (gama - gamaL).^2; % Diferença entre a aproximação linear e os valores reais
-% dTheta = theta(2) - theta(1); % Cálculo do incremento de theta
-% ie = sum(e*dTheta); % Cálculo da integral do erro
-% f = ie; % Valor da função objetivo
+e = (gama - gamaL).^2; % Diferença entre a aproximação linear e os valores reais
+dTheta = theta(2) - theta(1); % Cálculo do incremento de theta
+ie = sum(e*dTheta); % Cálculo da integral do erro
+f = ie; % Valor da função objetivo
