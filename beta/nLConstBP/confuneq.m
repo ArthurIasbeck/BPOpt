@@ -14,9 +14,13 @@ global gama0
 global rc
 global l3
 
-thetaR = x(1);
-m = x(2);
-l1 = x(3);
+% thetaR = x(1);
+% m = x(2);
+% l1 = x(3);
+
+thetaR = 20*pi/180;
+m = x(1);
+l1 = x(1);
 
 hr = l1*sin(pi/6 - thetaR);
 Hl = l1*sin(pi/6 + thetaR);

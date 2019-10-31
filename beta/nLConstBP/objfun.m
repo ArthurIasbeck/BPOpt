@@ -4,9 +4,13 @@ global h;
 global hm;
 global hc;
 
-thetaR = x(1);
-m = x(2);
-l1 = x(3);
+% thetaR = x(1);
+% m = x(2);
+% l1 = x(3);
+
+thetaR = 20*pi/180;
+m = x(1);
+l1 = x(1);
 
 thetaM = pi/180*linspace(-30,30);
 thetaN = atan((h - hm - hc)/m);
@@ -18,11 +22,12 @@ gamaL = pi/180*linspace(-30,30);
 % Caso não seja possível definir um 'gama' real, a função 'link4' retornará
 % inifinito. Neste caso a solução deve ser penalizada ao máximo. 
 if gama == Inf
-    f = Inf;
+    f = 999;
     return;
 end
 
-e = (gama - gamaL).^2; % Diferença entre a aproximação linear e os valores reais
+% e = (gama - gamaL).^2; % Diferença entre a aproximação linear e os valores reais
+e = abs(gama - gamaL);
 dTheta = theta(2) - theta(1); % Cálculo do incremento de theta
 ie = sum(e*dTheta); % Cálculo da integral do erro
 f = ie; % Valor da função objetivo
