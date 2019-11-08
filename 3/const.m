@@ -1,6 +1,6 @@
 function [c, ceq] = const(x)
 
-rc = 0.026;
+rc = 0.013;
 r = 0.01;
 
 l1 = x(1); % Braço do motor

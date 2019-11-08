@@ -2,3 +2,5 @@
 2 - Considerando o comprimento hc
 3 - Considerando o comprimento hc e a restrição que impede que o braço do motor se choque com o centro da mesa
 4 - Considerando o comprimento hc, a restrição que impede que o braço do motor se choque com o centro da mesa, e a que impede que o braço do motor se choque com a base da mesa
+5 - Considerando como função objetivo não a distância entre os pontos das curvas, mas a correlação (R^2) entre elas
+6 - COnsiderando a distância h0 e o raio r0, referentes à cantoneira que prente o braço l2 à mesa

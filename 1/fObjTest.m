@@ -1,6 +1,6 @@
 clc; clear;
 
-x = [0.11832 0.14609]; 
+x = [0.073479 0.064205]; 
 
 l1 = x(1); % Braço do motor
 m = x(2); % Distância do motor até o centro da mesa
@@ -8,11 +8,12 @@ m = x(2); % Distância do motor até o centro da mesa
 nData = 100;
 l3 = 0.15; % Metade do comprimento da mesa
 h = 0.1625; % Altura da mesa
+hm = 0.0425;
 thetaMValues = linspace(-pi/6,pi/6,nData); % Angulos que o motor assume
 gamaValues = zeros(nData,1); % Vetor que guarda os valores de inclinação da mesa
 
-n = atan(h/m); % Ângulo entre l0 e a horizontal
-l0 = sqrt(h^2 + m^2);
+n = atan((h-hm)/m); % Ângulo entre l0 e a horizontal
+l0 = sqrt((h - hm)^2 + m^2);
 l2 = sqrt((l0 - l1)^2 + l3^2 - 2*l3*(l0-l1)*cos(n));
 
 for j = 1:nData
